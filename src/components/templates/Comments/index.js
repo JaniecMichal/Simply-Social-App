@@ -6,7 +6,7 @@ const Comments = ({ isVisible, comments }) => {
   return (
     <StyledList isVisible={isVisible}>
       {comments.map((comment) => (
-        <Comment comment={comment} key={`${comment.author}${comment.data}`} />
+        <Comment comment={comment} key={`${comment.author}${comment.date}`} />
       ))}
     </StyledList>
   );

@@ -7,12 +7,12 @@ const postsSlice = createSlice({
     posts: initialPosts,
   },
   reducers: {
-    addPost: ({ tasks }, { payload }) => {
-      tasks.push(payload);
+    addPost: ({ posts }, { payload }) => {
+      posts.unshift(payload);
     },
     removePost: (state, action) => {
-      const index = state.tasks.findIndex((task) => task.id === action.payload);
-      state.tasks.splice(index, 1);
+      const index = state.posts.findIndex((post) => post.id === action.payload);
+      state.posts.splice(index, 1);
     },
   },
 });

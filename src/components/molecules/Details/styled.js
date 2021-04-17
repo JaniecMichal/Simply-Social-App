@@ -19,7 +19,7 @@ export const AuthorName = styled.h4`
   color: ${({ theme }) => theme.colors.yaleBlue};
 `;
 
-export const PostData = styled.p`
+export const PostDate = styled.p`
   font-size: ${({ theme }) => theme.fontSize.small};
   color: ${({ theme }) => theme.colors.bGrey};
 `;

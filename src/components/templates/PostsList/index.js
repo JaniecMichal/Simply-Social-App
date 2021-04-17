@@ -10,7 +10,7 @@ const PostsList = () => {
   return (
     <StyledList isPostList>
       {posts.map((post) => (
-        <Post postDetails={post} key={`${post.author}${post.data}`} />
+        <Post postDetails={post} key={`${post.author}${post.date}`} />
       ))}
     </StyledList>
   );

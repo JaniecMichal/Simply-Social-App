@@ -2,9 +2,9 @@ import { selectUser } from 'mainComponent/redux/userSlice';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { ButtonWrapper, StyledButton } from '../../atoms/Button';
-import { Wrapper, ProfileIcon, AuthorName, PostData } from './styled';
+import { Wrapper, ProfileIcon, AuthorName, PostDate } from './styled';
 
-const Details = ({ icon, name, data }) => {
+const Details = ({ icon, name, date }) => {
   const loggedUser = useSelector(selectUser);
 
   return (
@@ -12,7 +12,7 @@ const Details = ({ icon, name, data }) => {
       <ProfileIcon src={icon} alt="author profileIcon" />
       <div>
         <AuthorName>{name}</AuthorName>
-        <PostData>{data}</PostData>
+        <PostDate>{date}</PostDate>
       </div>
       <ButtonWrapper isVisible={loggedUser.name === name ? true : false}>
         <StyledButton>Edit</StyledButton>

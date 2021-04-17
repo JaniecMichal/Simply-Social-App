@@ -8,7 +8,7 @@ import { PostWrapper } from 'components/atoms/PostWrapper';
 import Comments from 'components/templates/Comments';
 
 const Post = ({
-  postDetails: { author, data, profileIcon, title, content, comments },
+  postDetails: { author, date, profileIcon, title, content, comments },
 }) => {
   const [showComments, setShowComments] = useState(false);
 
@@ -16,7 +16,7 @@ const Post = ({
 
   return (
     <PostWrapper>
-      <Details icon={profileIcon} name={author} data={data} />
+      <Details icon={profileIcon} name={author} date={date} />
       <Section post>
         <Title>{title}</Title>
         <PostContent>{content}</PostContent>
