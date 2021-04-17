@@ -1,5 +1,5 @@
 import React from 'react';
-import Post from 'components/molecules/Post';
+import Post from 'components/organisms/Post';
 import { StyledList } from 'components/atoms/List';
 
 const PostsList = ({ initialPosts }) => {

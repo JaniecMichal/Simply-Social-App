@@ -2,7 +2,7 @@ import React from 'react';
 import { MainWrapper } from './styled';
 import UserPanel from 'components/molecules/UserPanel';
 import PostingPanel from 'components/molecules/PostingPanel';
-import PostWall from 'components/templates/PostWall';
+import PostWall from 'components/views/PostWall';
 
 function App() {
   return (

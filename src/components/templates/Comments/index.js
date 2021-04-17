@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledList } from 'components/atoms/List';
-import Comment from 'components/molecules/Comment';
+import Comment from 'components/organisms/Comment';
 
 const Comments = ({ isVisible, comments }) => {
   return (

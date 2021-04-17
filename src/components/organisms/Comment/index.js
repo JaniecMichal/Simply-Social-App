@@ -1,5 +1,5 @@
 import React from 'react';
-import Details from 'components/atoms/Details';
+import Details from 'components/molecules/Details';
 import { Section } from 'components/atoms/Section';
 import { PostContent } from 'components/atoms/PostContent';
 import { PostWrapper } from 'components/atoms/PostWrapper';

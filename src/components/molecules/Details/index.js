@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonWrapper, StyledButton } from '../Button';
+import { ButtonWrapper, StyledButton } from '../../atoms/Button';
 import { Wrapper, ProfileIcon, AuthorName, PostData } from './styled';
 
 const Details = ({ icon, name, data }) => {
