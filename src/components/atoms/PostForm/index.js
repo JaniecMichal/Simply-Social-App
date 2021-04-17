@@ -1,10 +1,16 @@
 import React from 'react';
-import { StyledForm, StyledTextInput, Button } from './styled';
+import {
+  StyledForm,
+  StyledTitleInput,
+  StyledTextInput,
+  Button,
+} from './styled';
 
 const PostForm = () => {
   return (
     <StyledForm>
-      <StyledTextInput></StyledTextInput>
+      <StyledTitleInput placeholder="Write post title" required />
+      <StyledTextInput required></StyledTextInput>
       <Button>Add your post</Button>
     </StyledForm>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { ButtonWrapper, StyledButton } from '../Button';
 import { Wrapper, ProfileIcon, AuthorName, PostData } from './styled';
 
 const Details = ({ icon, name, data }) => {
@@ -9,6 +10,10 @@ const Details = ({ icon, name, data }) => {
         <AuthorName>{name}</AuthorName>
         <PostData>{data}</PostData>
       </div>
+      <ButtonWrapper>
+        <StyledButton>Edit</StyledButton>
+        <StyledButton remove>Remove</StyledButton>
+      </ButtonWrapper>
     </Wrapper>
   );
 };

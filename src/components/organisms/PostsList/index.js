@@ -1,10 +1,10 @@
 import React from 'react';
 import Post from 'components/molecules/Post';
-import { StyledList } from './styled';
+import { StyledList } from 'components/atoms/List';
 
 const PostsList = ({ initialPosts }) => {
   return (
-    <StyledList>
+    <StyledList isPostList={true}>
       {initialPosts.map((initialPost) => (
         <Post
           postDetails={initialPost}

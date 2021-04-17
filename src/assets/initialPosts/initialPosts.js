@@ -4,6 +4,7 @@ export const initialPosts = [
   {
     author: 'Jan Kowalski',
     profileIcon: photo,
+    title: 'My Travels',
     content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
       Quisque iaculis, turpis a auctor aliquet, ante ipsum accumsan mauris, in dictum velit nibh in dolor. I
       n hac habitasse platea dictumst. Donec et nisl faucibus tellus condimentum semper eget sed dui.
@@ -14,11 +15,13 @@ export const initialPosts = [
     comments: [
       {
         author: 'Konrad Wallenrod',
+        profileIcon: photo,
         content: `Great post!`,
         data: '18-April-2021',
       },
       {
-        author: 'Konrad Wallenrod',
+        author: 'J. R. R. Tolkien',
+        profileIcon: photo,
         content: `I like reading your posts. Give us more..`,
         data: '18-April-2021',
       },
@@ -27,6 +30,7 @@ export const initialPosts = [
   {
     author: 'Michał Janiec',
     profileIcon: photo,
+    title: 'My new car!',
     content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
       Quisque iaculis, turpis a auctor aliquet, ante ipsum accumsan mauris, in dictum velit nibh in dolor. I
       n hac habitasse platea dictumst. Donec et nisl faucibus tellus condimentum semper eget sed dui.
@@ -37,21 +41,25 @@ export const initialPosts = [
     comments: [
       {
         author: 'Konrad Wallenrod',
+        profileIcon: photo,
         content: `Great post!`,
         data: '13-April-2021',
       },
       {
-        author: 'Konrad Wallenrod',
+        author: 'Chuck Norris',
+        profileIcon: photo,
         content: `I like reading your posts. Give us more..`,
         data: '14-April-2021',
       },
       {
         author: 'Bruce Lee',
+        profileIcon: photo,
         content: `Great post!`,
         data: '13-April-2021',
       },
       {
         author: 'Aragorn',
+        profileIcon: photo,
         content: `I like reading your posts. Give us more..`,
         data: '14-April-2021',
       },
