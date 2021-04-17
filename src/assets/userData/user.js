@@ -1,5 +1,8 @@
+import photo from 'assets/images/noPhoto.jpeg';
+
 export const user = {
   name: 'Michał Janiec',
+  photo: photo,
   position: 'Junior Frontend Developer',
   description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis,
   turpis a auctor aliquet, ante ipsum accumsan mauris, in dictum velit nibh

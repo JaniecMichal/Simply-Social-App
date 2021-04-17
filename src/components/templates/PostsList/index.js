@@ -1,15 +1,16 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Post from 'components/organisms/Post';
 import { StyledList } from 'components/atoms/List';
+import { selectPosts } from 'mainComponent/redux/postSlice';
 
-const PostsList = ({ initialPosts }) => {
+const PostsList = () => {
+  const posts = useSelector(selectPosts);
+
   return (
-    <StyledList isPostList={true}>
-      {initialPosts.map((initialPost) => (
-        <Post
-          postDetails={initialPost}
-          key={`${initialPost.author}${initialPost.data}`}
-        />
+    <StyledList isPostList>
+      {posts.map((post) => (
+        <Post postDetails={post} key={`${post.author}${post.data}`} />
       ))}
     </StyledList>
   );

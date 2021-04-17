@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { ShowComments } from './styled';
 import Details from 'components/molecules/Details';
 import { Section } from 'components/atoms/Section';
@@ -6,6 +7,7 @@ import { Title } from 'components/atoms/Title';
 import { PostContent } from 'components/atoms/PostContent';
 import { PostWrapper } from 'components/atoms/PostWrapper';
 import Comments from 'components/templates/Comments';
+import { selectComments } from 'mainComponent/redux/postSlice';
 
 const Post = ({
   postDetails: { author, data, profileIcon, title, content, comments },
