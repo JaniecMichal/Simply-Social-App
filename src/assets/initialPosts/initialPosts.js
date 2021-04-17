@@ -20,7 +20,7 @@ export const initialPosts = [
         data: '18-April-2021',
       },
       {
-        author: 'J. R. R. Tolkien',
+        author: 'Michał Janiec',
         profileIcon: photo,
         content: `I like reading your posts. Give us more..`,
         data: '18-April-2021',
