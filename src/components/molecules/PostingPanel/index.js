@@ -1,12 +1,13 @@
 import React from 'react';
-import { AddingPost, Title } from './styled';
 import PostForm from 'components/atoms/PostForm';
+import { Section } from 'components/atoms/Section';
+import { Title } from 'components/atoms/Title';
 
 const PostingPanel = () => (
-  <AddingPost>
+  <Section>
     <Title>Write your post ✍ only interested post are permitted 😛</Title>
     <PostForm />
-  </AddingPost>
+  </Section>
 );
 
 export default PostingPanel;
