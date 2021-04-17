@@ -6,7 +6,7 @@ export const StyledForm = styled.form`
 `;
 
 export const StyledTitleInput = styled.input`
-  width: 20%;
+  width: 25%;
   height: 100px;
   resize: none;
   margin-right: 20px;
@@ -16,7 +16,7 @@ export const StyledTitleInput = styled.input`
 `;
 
 export const StyledTextInput = styled.textarea`
-  width: 80%;
+  width: 50%;
   height: 100px;
   resize: none;
   margin-right: 20px;
@@ -26,7 +26,8 @@ export const StyledTextInput = styled.textarea`
 `;
 
 export const Button = styled.button`
-  width: 20%;
+  width: 25%;
+  padding: 10px 20px;
   background-color: ${({ theme }) => theme.colors.yaleBlue};
   color: ${({ theme }) => theme.colors.text};
   border: 2px solid ${({ theme }) => theme.colors.yaleBlue};
