@@ -3,6 +3,13 @@ import styled, { css } from 'styled-components';
 export const ButtonWrapper = styled.div`
   position: absolute;
   right: 50px;
+  display: none;
+
+  ${({ isVisible }) =>
+    isVisible &&
+    css`
+      display: inherit;
+    `}
 `;
 
 export const StyledButton = styled.button`
