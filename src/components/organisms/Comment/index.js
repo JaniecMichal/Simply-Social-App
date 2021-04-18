@@ -4,10 +4,16 @@ import { Section } from 'components/atoms/Section';
 import { PostContent } from 'components/atoms/PostContent';
 import { PostWrapper } from 'components/atoms/PostWrapper';
 
-const Comment = ({ comment: { author, date, profileIcon, content } }) => {
+const Comment = ({ comment: { id, author, date, profileIcon, content } }) => {
   return (
     <PostWrapper>
-      <Details icon={profileIcon} name={author} date={date} />
+      <Details
+        icon={profileIcon}
+        name={author}
+        date={date}
+        id={id}
+        comment={true}
+      />
       <Section post>
         <PostContent>{content}</PostContent>
       </Section>

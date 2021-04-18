@@ -14,10 +14,14 @@ const postsSlice = createSlice({
       const index = state.posts.findIndex((post) => post.id === action.payload);
       state.posts.splice(index, 1);
     },
+    editPost: (state, { payload }) => {
+      const index = state.posts.findIndex((post) => post.id === payload.id);
+      state.posts[index] = payload;
+    },
   },
 });
 
-export const { addPost, removePost } = postsSlice.actions;
+export const { addPost, removePost, editPost } = postsSlice.actions;
 
 const selectPostsState = (state) => state.posts;
 

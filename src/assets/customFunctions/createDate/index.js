@@ -1,9 +1,9 @@
-export const createDate = (date) => {
+export const createDate = (date, edit) => {
   const dateString = date.toLocaleDateString('en-EN', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
   });
   const timeString = date.toLocaleTimeString();
-  return `Created at ${timeString} on ${dateString}`;
+  return `${!edit ? 'Created' : 'Edited'} at ${timeString} on ${dateString}`;
 };

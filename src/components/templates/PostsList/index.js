@@ -7,6 +7,9 @@ import { selectPosts } from 'mainComponent/redux/postSlice';
 const PostsList = () => {
   const posts = useSelector(selectPosts);
 
+  if (posts.length === 0)
+    return <p>Sorry... I was lazy and I don't have new posts for you 😥</p>;
+
   return (
     <StyledList isPostList>
       {posts.map((post) => (

@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import {
-  StyledForm,
-  StyledTitleInput,
-  StyledTextInput,
-  Button,
-} from './styled';
+import { StyledForm, Button } from './styled';
 import { addPost } from 'mainComponent/redux/postSlice';
 import { selectUser } from 'mainComponent/redux/userSlice';
 import { useCurrentDate } from 'assets/customHooks/useCurrentDate';
 import { createDate } from 'assets/customFunctions/createDate';
+import { StyledTextInput } from 'components/atoms/Textarea';
+import { StyledTitleInput } from 'components/atoms/Input';
 
 const PostForm = () => {
   const [newTitleValue, setNewTitleValue] = useState('');

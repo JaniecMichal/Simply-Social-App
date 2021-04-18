@@ -15,14 +15,14 @@ export const initialPosts = [
     date: 'Created at 13:12:31 on April 16, 2021',
     comments: [
       {
-        id: '1',
+        id: 'k1w',
         author: 'Konrad Wallenrod',
         profileIcon: photo,
         content: `Great post!`,
         date: 'Created at 11:23:31 on April 17, 2021',
       },
       {
-        id: '2',
+        id: 'm2j',
         author: 'Michał Janiec',
         profileIcon: photo,
         content: `I like reading your posts. Give us more..`,
@@ -44,28 +44,28 @@ export const initialPosts = [
     date: 'Created at 10:12:31 on April 11, 2021',
     comments: [
       {
-        id: '1',
+        id: 'kw1',
         author: 'Konrad Wallenrod',
         profileIcon: photo,
         content: `Great post!`,
         date: 'Created at 11:23:31 on April 12, 2021',
       },
       {
-        id: '2',
+        id: 'cn2',
         author: 'Chuck Norris',
         profileIcon: photo,
         content: `I like reading your posts. Give us more..`,
         date: 'Created at 11:23:31 on April 13, 2021',
       },
       {
-        id: '3',
+        id: 'bl3',
         author: 'Bruce Lee',
         profileIcon: photo,
         content: `Great post!`,
         date: 'Created at 15:23:31 on April 13, 2021',
       },
       {
-        id: '4',
+        id: 'asa4',
         author: 'Aragorn',
         profileIcon: photo,
         content: `I like reading your posts. Give us more..`,

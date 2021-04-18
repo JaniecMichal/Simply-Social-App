@@ -10,6 +10,12 @@ export const ButtonWrapper = styled.div`
     css`
       display: inherit;
     `}
+
+  ${({ comment }) =>
+    comment &&
+    css`
+      display: none;
+    `}
 `;
 
 export const StyledButton = styled.button`

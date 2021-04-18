@@ -1,13 +1,5 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 0 15px 10px 15px;
-  border-bottom: 2px solid ${({ theme }) => theme.colors.yaleBlue};
-`;
-
 export const ProfileIcon = styled.img`
   width: 80px;
   height: 80px;

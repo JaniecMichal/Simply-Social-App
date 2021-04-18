@@ -1,5 +1,5 @@
 import React from 'react';
-import PostForm from 'components/atoms/PostForm';
+import PostForm from 'components/molecules/PostForm';
 import { Section } from 'components/atoms/Section';
 import { Title } from 'components/atoms/Title';
 

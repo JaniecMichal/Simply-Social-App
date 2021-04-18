@@ -1,30 +1,67 @@
 import React, { useState } from 'react';
-import { ShowComments } from './styled';
+import { useDispatch, useSelector } from 'react-redux';
+import { Wrapper, ShowComments } from './styled';
 import Details from 'components/molecules/Details';
+import { ButtonWrapper, StyledButton } from 'components/atoms/Button';
 import { Section } from 'components/atoms/Section';
 import { Title } from 'components/atoms/Title';
 import { PostContent } from 'components/atoms/PostContent';
 import { PostWrapper } from 'components/atoms/PostWrapper';
 import Comments from 'components/templates/Comments';
+import { removePost } from 'mainComponent/redux/postSlice';
+import { selectUser } from 'mainComponent/redux/userSlice';
+import EditForm from 'components/molecules/EditForm';
 
-const Post = ({
-  postDetails: { author, date, profileIcon, title, content, comments },
-}) => {
+const Post = ({ postDetails }) => {
   const [showComments, setShowComments] = useState(false);
+  const dispatch = useDispatch();
+  const loggedUser = useSelector(selectUser);
+  const [editedPostId, setEditedPostId] = useState(null);
+
+  const togglePostEdit = (id) => {
+    editedPostId !== id ? setEditedPostId(id) : setEditedPostId(null);
+  };
+
+  const handleRemovePost = () => {
+    dispatch(removePost(postDetails.id));
+  };
 
   const showCommentList = () => setShowComments(!showComments);
 
   return (
     <PostWrapper>
-      <Details icon={profileIcon} name={author} date={date} />
+      <Wrapper>
+        <Details
+          icon={postDetails.profileIcon}
+          name={postDetails.author}
+          date={postDetails.date}
+          id={postDetails.id}
+        />
+        <ButtonWrapper
+          isVisible={loggedUser.name === postDetails.author ? true : false}
+        >
+          <StyledButton onClick={() => togglePostEdit(postDetails.id)}>
+            Edit
+          </StyledButton>
+          <StyledButton remove onClick={handleRemovePost}>
+            Remove
+          </StyledButton>
+        </ButtonWrapper>
+      </Wrapper>
       <Section post>
-        <Title>{title}</Title>
-        <PostContent>{content}</PostContent>
+        {editedPostId === postDetails.id ? (
+          <EditForm togglePostEdit={togglePostEdit} postDetails={postDetails} />
+        ) : (
+          <>
+            <Title>{postDetails.title}</Title>
+            <PostContent>{postDetails.content}</PostContent>
+          </>
+        )}
       </Section>
       <ShowComments onClick={showCommentList}>
-        Show comments ({comments.length})
+        Show comments ({postDetails.comments.length})
       </ShowComments>
-      <Comments comments={comments} isVisible={showComments} />
+      <Comments comments={postDetails.comments} isVisible={showComments} />
     </PostWrapper>
   );
 };
