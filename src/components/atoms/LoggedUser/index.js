@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyledLink } from '../StyledLink';
 import { Wrapper, LogInfo, Name, Caption, AddNewWrapper } from './styled';
-import { toAddPage } from 'mainComponent/routes';
+import { toAddPage } from 'core/routes';
 
 const LoggedUser = ({ user: { name } }) => {
   return (

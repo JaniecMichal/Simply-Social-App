@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router';
-import { getPostById } from 'mainComponent/redux/postSlice';
+import { getPostById } from 'core/redux/postSlice';
 import { Section } from 'components/atoms/Section';
 import { Title } from 'components/atoms/Title';
 import EditForm from 'components/molecules/EditForm';

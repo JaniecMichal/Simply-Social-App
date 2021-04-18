@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Section } from 'components/atoms/Section';
 import { PostContent } from 'components/atoms/PostContent';
 import { Title } from 'components/atoms/Title';
-import { selectUser } from 'mainComponent/redux/userSlice';
+import { selectUser } from 'core/redux/userSlice';
 import Image from 'components/atoms/Image';
 
 const AuthorPage = () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Post from 'components/organisms/Post';
 import { StyledList } from 'components/atoms/List';
-import { selectPosts } from 'mainComponent/redux/postSlice';
+import { selectPosts } from 'core/redux/postSlice';
 
 const PostsList = () => {
   const posts = useSelector(selectPosts);

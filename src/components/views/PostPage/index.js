@@ -5,14 +5,14 @@ import Comments from 'components/templates/Comments';
 import Image from 'components/atoms/Image';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
-import { getPostById, removePost } from 'mainComponent/redux/postSlice';
-import { selectUser } from 'mainComponent/redux/userSlice';
+import { getPostById, removePost } from 'core/redux/postSlice';
+import { selectUser } from 'core/redux/userSlice';
 import { Section } from 'components/atoms/Section';
 import { PostContent } from 'components/atoms/PostContent';
 import { Title } from 'components/atoms/Title';
 import { Wrapper } from 'components/organisms/Post/styled';
 import { StyledLink } from 'components/atoms/StyledLink';
-import { toEditPage, toHomePage } from 'mainComponent/routes';
+import { toEditPage, toHomePage } from 'core/routes';
 
 const PostPage = () => {
   const { id } = useParams();

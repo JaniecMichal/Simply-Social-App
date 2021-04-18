@@ -7,10 +7,10 @@ import { Section } from 'components/atoms/Section';
 import { Title } from 'components/atoms/Title';
 import { PostContent } from 'components/atoms/PostContent';
 import { PostWrapper } from 'components/atoms/PostWrapper';
-import { removePost } from 'mainComponent/redux/postSlice';
-import { selectUser } from 'mainComponent/redux/userSlice';
+import { removePost } from 'core/redux/postSlice';
+import { selectUser } from 'core/redux/userSlice';
 import { StyledLink } from 'components/atoms/StyledLink';
-import { toEditPage, toPostPage } from 'mainComponent/routes';
+import { toEditPage, toPostPage } from 'core/routes';
 
 const Post = ({ postDetails }) => {
   const dispatch = useDispatch();

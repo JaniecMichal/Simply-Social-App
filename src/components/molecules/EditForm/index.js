@@ -5,7 +5,7 @@ import { StyledTextInput } from 'components/atoms/Textarea';
 import { StyledTitleInput } from 'components/atoms/Input';
 import { useCurrentDate } from 'assets/customHooks/useCurrentDate';
 import { createDate } from 'assets/customFunctions/createDate';
-import { editPost } from 'mainComponent/redux/postSlice';
+import { editPost } from 'core/redux/postSlice';
 
 const EditForm = ({ postDetails, togglePostEdit }) => {
   const [editedTitleValue, setEditedTitleValue] = useState(postDetails.title);

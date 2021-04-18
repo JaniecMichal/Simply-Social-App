@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { StyledHeader } from './styled';
 import LoggedUser from 'components/atoms/LoggedUser';
-import { selectUser } from 'mainComponent/redux/userSlice';
+import { selectUser } from 'core/redux/userSlice';
 
 const UserPanel = () => {
   const loggedUser = useSelector(selectUser);
