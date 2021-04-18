@@ -5,7 +5,7 @@ import { Title } from 'components/atoms/Title';
 
 const PostingPanel = () => (
   <Section>
-    <Title>Write your post ✍ only interested post are permitted 😛</Title>
+    <Title>Write your post ✍ only interesting post are permitted 😛</Title>
     <PostForm />
   </Section>
 );

@@ -5,6 +5,7 @@ export const theme = {
     big: '18px',
     large: '24px',
     xlarge: '38px',
+    xxlarge: '64px',
   },
   colors: {
     mainBackground: '#C0C7D6',
@@ -14,7 +15,9 @@ export const theme = {
     frost: '#6096BA',
     bbEyes: '#A3CEF1',
     bGrey: '#8B8C89',
+    emperor: '#4F4F4F',
     platinum: '#E1E1E0',
+    crimson: '#dc143c',
   },
   media: {
     smallMobile: '340px',

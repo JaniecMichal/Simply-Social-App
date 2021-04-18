@@ -27,7 +27,7 @@ const selectPostsState = (state) => state.posts;
 
 export const selectPosts = (state) => selectPostsState(state).posts;
 
-/* export const getTaskById = (state, taskId) =>
-  selectTasks(state).find(({ id }) => id === taskId); */
+export const getPostById = (state, postId) =>
+  selectPosts(state).find(({ id }) => id === postId);
 
 export default postsSlice.reducer;

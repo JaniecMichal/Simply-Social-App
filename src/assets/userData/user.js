@@ -1,4 +1,4 @@
-import photo from 'assets/images/noPhoto.jpeg';
+import photo from 'assets/images/loggedUser.jpg';
 
 export const user = {
   name: 'Michał Janiec',

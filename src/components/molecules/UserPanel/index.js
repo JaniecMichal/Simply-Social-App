@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { StyledHeader, ProfilePhoto } from './styled';
-import BioData from 'components/atoms/BioData';
+import { StyledHeader } from './styled';
+import LoggedUser from 'components/atoms/LoggedUser';
 import { selectUser } from 'mainComponent/redux/userSlice';
 
 const UserPanel = () => {
@@ -9,8 +9,7 @@ const UserPanel = () => {
 
   return (
     <StyledHeader>
-      <ProfilePhoto src={loggedUser.photo} alt="yourPhoto" />
-      <BioData user={loggedUser} />
+      <LoggedUser user={loggedUser} />
     </StyledHeader>
   );
 };

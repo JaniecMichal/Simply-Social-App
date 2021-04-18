@@ -11,6 +11,7 @@ import Comments from 'components/templates/Comments';
 import { removePost } from 'mainComponent/redux/postSlice';
 import { selectUser } from 'mainComponent/redux/userSlice';
 import EditForm from 'components/molecules/EditForm';
+import { StyledLink } from 'components/atoms/StyledLink';
 
 const Post = ({ postDetails }) => {
   const [showComments, setShowComments] = useState(false);
@@ -54,7 +55,10 @@ const Post = ({ postDetails }) => {
         ) : (
           <>
             <Title>{postDetails.title}</Title>
-            <PostContent>{postDetails.content}</PostContent>
+            <PostContent>
+              {postDetails.content}
+              <StyledLink to={`/post/${postDetails.id}`}>Read more</StyledLink>
+            </PostContent>
           </>
         )}
       </Section>

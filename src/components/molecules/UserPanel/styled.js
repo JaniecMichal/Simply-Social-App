@@ -2,13 +2,12 @@ import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
   width: 100%;
-  padding: 20px 10px;
+  padding: 10px 10px;
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
   background-color: ${({ theme }) => theme.colors.platinum};
-`;
-
-export const ProfilePhoto = styled.img`
-  width: 100%;
-  max-width: 300px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
 `;

@@ -16,6 +16,5 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 400;
         background-color:${({ theme }) => theme.colors.mainBackground};
         color: ${({ theme }) => theme.colors.mainText};
-        padding:10px;
     }
 `;

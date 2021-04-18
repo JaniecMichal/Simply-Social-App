@@ -35,8 +35,8 @@ export const StyledButton = styled.button`
   ${({ remove }) =>
     remove &&
     css`
-      background-color: crimson;
-      border-color: crimson;
+      background-color: ${({ theme }) => theme.colors.crimson};
+      border-color: ${({ theme }) => theme.colors.crimson};
       color: ${({ theme }) => theme.colors.text};
     `}
 
