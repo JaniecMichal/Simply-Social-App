@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyledList } from 'components/atoms/List';
 import Comment from 'components/organisms/Comment';
+import { StyledList } from 'components/atoms/List';
 import { Title } from 'components/atoms/Title';
 
 const Comments = ({ comments }) => {

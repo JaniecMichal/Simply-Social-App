@@ -1,8 +1,15 @@
 import React from 'react';
-import PostWall from 'components/templates/PostWall';
+import PostsList from 'components/templates/PostsList';
+import { Section } from 'components/atoms/Section';
+import { Title } from 'components/atoms/Title';
 
 const PostsListPage = () => {
-  return <PostWall />;
+  return (
+    <Section>
+      <Title>Latest posts</Title>
+      <PostsList />
+    </Section>
+  );
 };
 
 export default PostsListPage;
