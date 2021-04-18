@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
-import Navbar from 'components/atoms/Navbar';
+import Navbar from 'components/organisms/Navbar';
 import PostPage from 'components/views/PostPage';
 import AuthorPage from 'components/views/AuthorPage';
 import EditPage from 'components/views/EditPage';

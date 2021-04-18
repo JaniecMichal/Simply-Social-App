@@ -12,6 +12,14 @@ export const NavWrapper = styled.nav`
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.mainBackground};
+
+  @media (max-width: ${({ theme }) => theme.media.tablet}) {
+    justify-content: flex-start;
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    flex-direction: column;
+  }
 `;
 
 export const NavList = styled.ul`
@@ -19,6 +27,10 @@ export const NavList = styled.ul`
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    flex-direction: column;
+  }
 `;
 
 export const NavListItem = styled.li`
@@ -26,7 +38,16 @@ export const NavListItem = styled.li`
   margin-right: 50px;
 
   &:last-child {
-    margin-right: 0px;
+    margin-right: 0;
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    margin-right: 0;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 `;
 

@@ -8,6 +8,6 @@ export const Hero = styled.div`
   margin: 0 auto 48px auto;
   background-image: url(${hero});
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 `;
