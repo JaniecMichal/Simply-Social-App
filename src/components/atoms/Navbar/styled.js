@@ -25,7 +25,7 @@ export const NavListItem = styled.li`
   list-style-type: none;
   margin-right: 50px;
 
-  &::last-child {
+  &:last-child {
     margin-right: 0px;
   }
 `;

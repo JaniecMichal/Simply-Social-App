@@ -19,7 +19,7 @@ export const StyledButton = styled.button`
     cursor: pointer;
     filter: brightness(1.2);
   }
-  &::last-child {
+  &:last-child {
     margin-right: 0;
   }
 `;
