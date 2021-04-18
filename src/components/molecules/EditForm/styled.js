@@ -2,12 +2,14 @@ import styled from 'styled-components';
 
 export const StyledForm = styled.form`
   display: flex;
+  flex-direction: column;
   background-color: ${({ theme }) => theme.colors.platinum};
 `;
 
 export const Button = styled.button`
-  width: 25%;
-  padding: 10px 20px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
   background-color: ${({ theme }) => theme.colors.yaleBlue};
   color: ${({ theme }) => theme.colors.text};
   border: 2px solid ${({ theme }) => theme.colors.yaleBlue};

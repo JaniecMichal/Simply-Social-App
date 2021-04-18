@@ -4,7 +4,7 @@ import { Section } from 'components/atoms/Section';
 import { PostContent } from 'components/atoms/PostContent';
 import { Title } from 'components/atoms/Title';
 import { selectUser } from 'mainComponent/redux/userSlice';
-import { ImageWrapper, StyledImg } from './styled';
+import Image from 'components/atoms/Image';
 
 const AuthorPage = () => {
   const loggedUser = useSelector(selectUser);
@@ -14,11 +14,9 @@ const AuthorPage = () => {
       <Section singlePost>
         <Title>About me</Title>
         <PostContent>
-          {loggedUser.name} working as {loggedUser.position}
+          {loggedUser.name} future {loggedUser.position}
         </PostContent>
-        <ImageWrapper>
-          <StyledImg src={loggedUser.photo} alt={loggedUser.name} />
-        </ImageWrapper>
+        <Image source={loggedUser.photo} altText={loggedUser.name} />
         <PostContent>{loggedUser.description}</PostContent>
       </Section>
     </>

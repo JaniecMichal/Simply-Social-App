@@ -195,7 +195,7 @@ export const initialPosts = [
     ],
   },
   {
-    id: '3',
+    id: '4',
     author: 'Michał Janiec',
     profileIcon: blogAuthorPhoto,
     title: 'My new car!',

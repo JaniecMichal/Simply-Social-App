@@ -12,6 +12,9 @@ const EditForm = ({ postDetails, togglePostEdit }) => {
   const [editedPostContent, setEdtedPostContent] = useState(
     postDetails.content
   );
+  const [editedPostFullContent, setEdtedPostFullContent] = useState(
+    postDetails.fullContent
+  );
   const date = useCurrentDate();
   const dispatch = useDispatch();
   const edit = true;
@@ -28,6 +31,7 @@ const EditForm = ({ postDetails, togglePostEdit }) => {
         ...postDetails,
         title: editedTitleValue.trim(),
         content: editedPostContent.trim(),
+        fullContent: editedPostFullContent.trim(),
         date: createDate(date, edit),
       })
     );
@@ -46,7 +50,12 @@ const EditForm = ({ postDetails, togglePostEdit }) => {
         value={editedPostContent}
         onChange={({ target }) => setEdtedPostContent(target.value)}
         required
-      ></StyledTextInput>
+      />
+      <StyledTextInput
+        value={editedPostFullContent}
+        onChange={({ target }) => setEdtedPostFullContent(target.value)}
+        required
+      />
       <Button>Submit</Button>
     </StyledForm>
   );
