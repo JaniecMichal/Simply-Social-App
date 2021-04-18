@@ -1,8 +1,8 @@
 import React from 'react';
-import PostingPanel from 'components/organisms/PostingPanel';
+import AddPostPanel from 'components/organisms/AddPostPanel';
 
 const AddPostPage = () => {
-  return <PostingPanel />;
+  return <AddPostPanel />;
 };
 
 export default AddPostPage;
