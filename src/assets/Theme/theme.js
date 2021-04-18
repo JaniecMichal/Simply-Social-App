@@ -8,7 +8,7 @@ export const theme = {
     xxlarge: '64px',
   },
   colors: {
-    mainBackground: '#C0C7D6',
+    mainBackground: '#E5E5E5',
     mainText: '#000000',
     text: '#fff',
     yaleBlue: '#274C77',

@@ -6,14 +6,8 @@ import { PostWrapper } from 'components/atoms/PostWrapper';
 
 const Comment = ({ comment: { id, author, date, profileIcon, content } }) => {
   return (
-    <PostWrapper>
-      <Details
-        icon={profileIcon}
-        name={author}
-        date={date}
-        id={id}
-        comment={true}
-      />
+    <PostWrapper comment>
+      <Details comment icon={profileIcon} name={author} date={date} id={id} />
       <Section post>
         <PostContent>{content}</PostContent>
       </Section>

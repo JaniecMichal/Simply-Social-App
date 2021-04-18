@@ -3,15 +3,13 @@ import { StyledList } from 'components/atoms/List';
 import Comment from 'components/organisms/Comment';
 import { Title } from 'components/atoms/Title';
 
-const Comments = ({ isVisible, comments }) => {
+const Comments = ({ comments }) => {
   return (
     <>
-      <Title comments isVisible={isVisible}>
-        Comments
-      </Title>
-      <StyledList isVisible={isVisible}>
+      <Title comments>Comments</Title>
+      <StyledList>
         {comments.map((comment) => (
-          <Comment comment={comment} key={`${comment.author}${comment.date}`} />
+          <Comment comment={comment} key={comment.id} />
         ))}
       </StyledList>
     </>

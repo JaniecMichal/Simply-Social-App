@@ -1,46 +1,14 @@
-import styled, { css } from 'styled-components';
+import React from 'react';
+import { StyledButton } from './styled';
+import { ReactComponent as EditIcon } from 'assets/images/edit.svg';
+import { ReactComponent as RemoveIcon } from 'assets/images/remove.svg';
 
-export const ButtonWrapper = styled.div`
-  position: absolute;
-  right: 50px;
-  display: none;
+const Button = (props) => {
+  return (
+    <StyledButton {...props}>
+      {props.remove === true ? <RemoveIcon /> : <EditIcon />}
+    </StyledButton>
+  );
+};
 
-  ${({ isVisible }) =>
-    isVisible &&
-    css`
-      display: inherit;
-    `}
-
-  ${({ comment }) =>
-    comment &&
-    css`
-      display: none;
-    `}
-`;
-
-export const StyledButton = styled.button`
-  font-weight: 700;
-  font-size: ${({ theme }) => theme.fontSize.normal};
-  color: ${({ theme }) => theme.colors.yaleBlue};
-  margin-right: 15px;
-  padding: 10px 20px;
-  background-color: ${({ theme }) => theme.colors.bbEyes};
-  border-color: ${({ theme }) => theme.colors.bbEyes};
-
-  &:hover {
-    cursor: pointer;
-    filter: brightness(1.2);
-  }
-
-  ${({ remove }) =>
-    remove &&
-    css`
-      background-color: ${({ theme }) => theme.colors.crimson};
-      border-color: ${({ theme }) => theme.colors.crimson};
-      color: ${({ theme }) => theme.colors.text};
-    `}
-
-  &::last-child {
-    margin-right: 0;
-  }
-`;
+export default Button;

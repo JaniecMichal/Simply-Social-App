@@ -3,17 +3,15 @@ import styled, { css } from 'styled-components';
 export const StyledList = styled.ul`
   list-style-type: none;
   padding: 0;
-  display: none;
 
   ${({ isPostList }) =>
     isPostList &&
     css`
-      display: inherit;
-    `}
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
 
-  ${({ isVisible }) =>
-    isVisible &&
-    css`
-      display: inherit;
+      @media (max-width: ${({ theme }) => theme.media.tablet}) {
+        display: inherit;
+      }
     `}
 `;

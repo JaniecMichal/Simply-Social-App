@@ -1,3 +1,4 @@
+import UserPanel from 'components/molecules/UserPanel';
 import React from 'react';
 import { NavWrapper, StyledNavLink, NavList, NavListItem } from './styled';
 
@@ -11,6 +12,7 @@ const Navbar = ({ navigationItems }) => {
           </NavListItem>
         ))}
       </NavList>
+      <UserPanel />
     </NavWrapper>
   );
 };

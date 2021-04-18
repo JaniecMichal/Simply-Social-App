@@ -7,7 +7,7 @@ import { PostContent } from 'components/atoms/PostContent';
 import { Title } from 'components/atoms/Title';
 import { Wrapper } from 'components/organisms/Post/styled';
 import Details from 'components/molecules/Details';
-import { ButtonWrapper, StyledButton } from 'components/atoms/Button';
+import Button from 'components/atoms/Button';
 import { selectUser } from 'mainComponent/redux/userSlice';
 import { ImageWrapper, StyledImg } from './styled';
 import Comments from 'components/templates/Comments';
@@ -27,12 +27,11 @@ const PostPage = () => {
             date={post.date}
             id={post.id}
           />
-          <ButtonWrapper
+          <Button isVisible={loggedUser.name === post.author ? true : false} />
+          <Button
             isVisible={loggedUser.name === post.author ? true : false}
-          >
-            <StyledButton>Edit</StyledButton>
-            <StyledButton remove>Remove</StyledButton>
-          </ButtonWrapper>
+            remove={true}
+          />
         </Wrapper>
         <Title>{post.title}</Title>
         <PostContent>{post.content}</PostContent>
@@ -42,7 +41,7 @@ const PostPage = () => {
         <PostContent>{post.fullContent}</PostContent>
       </Section>
 
-      <Comments comments={post.comments} isVisible={true} />
+      <Comments comments={post.comments} />
     </>
   );
 };

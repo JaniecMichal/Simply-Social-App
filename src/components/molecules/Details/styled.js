@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+export const Wrapper = styled.div`
+  ${({ comment }) =>
+    comment &&
+    css`
+      display: flex;
+      align-items: center;
+    `}
+`;
 
 export const ProfileIcon = styled.img`
   width: 80px;
