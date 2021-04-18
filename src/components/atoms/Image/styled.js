@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ImageWrapper = styled.div`
-  max-width: 70%;
+  max-width: 40%;
   align-self: center;
 `;
 
