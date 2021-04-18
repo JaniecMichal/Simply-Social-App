@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import { StyledForm, Button } from './styled';
-import { addPost } from 'core/redux/postSlice';
-import { selectUser } from 'core/redux/userSlice';
 import { useCurrentDate } from 'assets/customHooks/useCurrentDate';
 import { createDate } from 'assets/customFunctions/createDate';
+import { Submit } from 'components/atoms/Submit';
+import { StyledForm } from 'components/atoms/StyledForm';
 import { StyledTextInput } from 'components/atoms/Textarea';
 import { StyledTitleInput } from 'components/atoms/Input';
+import { addPost } from 'core/redux/postSlice';
+import { selectUser } from 'core/redux/userSlice';
 
-const PostForm = () => {
+const AddPostForm = () => {
   const [newTitleValue, setNewTitleValue] = useState('');
   const [newPostContent, setNewPostContent] = useState('');
   const [newFullContent, setNewFullContent] = useState('');
@@ -74,9 +75,9 @@ const PostForm = () => {
           required
         />
       </p>
-      <Button>Submit new post</Button>
+      <Submit>Submit new post</Submit>
     </StyledForm>
   );
 };
 
-export default PostForm;
+export default AddPostForm;

@@ -1,12 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledForm = styled.form`
-  background-color: ${({ theme }) => theme.colors.platinum};
-  display: flex;
-  flex-direction: column;
-`;
-
-export const Button = styled.button`
+export const Submit = styled.button`
   align-self: flex-end;
   width: 25%;
   padding: 10px 20px;

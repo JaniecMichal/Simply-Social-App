@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { StyledForm, Button } from './styled';
+import { StyledForm } from 'components/atoms/StyledForm';
+import { Submit } from 'components/atoms/Submit';
 import { StyledTextInput } from 'components/atoms/Textarea';
 import { StyledTitleInput } from 'components/atoms/Input';
 import { useCurrentDate } from 'assets/customHooks/useCurrentDate';
@@ -56,7 +57,7 @@ const EditForm = ({ postDetails, togglePostEdit }) => {
         onChange={({ target }) => setEdtedPostFullContent(target.value)}
         required
       />
-      <Button>Submit</Button>
+      <Submit>Submit</Submit>
     </StyledForm>
   );
 };
