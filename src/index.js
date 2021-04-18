@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import App from 'mainComponent/App';
 import { ThemeProvider } from 'styled-components';
+import App from 'mainComponent/App';
+import store from 'mainComponent/redux/store';
 import { GlobalStyle } from 'assets/GlobalStyles/GlobalStyles';
 import { theme } from 'assets/Theme/theme';
-import store from 'mainComponent/redux/store';
 
 ReactDOM.render(
   <React.StrictMode>
